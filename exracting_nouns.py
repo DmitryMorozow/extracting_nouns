@@ -23,7 +23,7 @@ def extract_page(elem):
     # ===\s*Морфологические\s*и\s*синтаксические\s*свойства\s*===\s*
     if text[0].text.find("{{сущ ru") == -1:
         return True
-    pattern = '{{сущ ru\s+(\S+)\s+(\S+)\s+([\d\*\w\(\)\?^-]*)\n*.*?\|основа\d*\s*=\s*([^|\n\s]*)'
+    pattern = "{{сущ ru\s+(\S+)\s+(\S+)\s+([\d\*\w\(\)\?^°'-]*)\n*.*?\|основа\d*\s*=\s*([^|\n\s]*)"
     good = False
     for m in re.finditer(pattern, text[0].text, re.S | re.M):
         good = True
