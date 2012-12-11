@@ -1581,3 +1581,699 @@ def q_f_7b( animacy, base, base1 = None, base2 = None):
     else:
         inf[0].add(base + 'я́х')
     # end pl
+    
+def q_f_1d( animacy, base, base1 = None, base2 = None):
+    # красота, сирота
+    inf = [[],[]]
+    inf[0].add(base + 'а́')
+    inf[0].add(base + 'ы́')
+    inf[0].add(base + 'е́')
+    if animacy:
+        inf[0].add(base + 'у́')
+    else:
+        inf[0].add(base + 'у́')
+    inf[0].add(base + 'о́й')
+    inf[0].add(base + 'е́')
+    # end sg
+    inf[1].add(base1 + 'ы')
+    inf[1].add(base1)
+    inf[1].add(base1 + 'ам')
+    if animacy:
+        inf[1].add(base1)
+    else:
+        inf[1].add(base1 + 'ы')
+    inf[1].add(base1 + 'ами')
+    inf[1].add(base1 + 'ах')
+    # end pl
+    
+def q_f_2d( animacy, base, base1 = None, base2 = None):
+    # заря
+    inf = [[],[]] 
+    inf[0].add(base + 'я́')
+    inf[0].add(base + 'и́')
+    inf[0].add(base + 'е')
+    if animacy:
+        inf[0].add(base + 'ю́')
+    else:
+        inf[0].add(base + 'ю́')
+    inf[0].add(base + 'ёй')
+    inf[0].add(base + 'е́')
+    # end sg
+    inf[1].add(base1 + 'и')
+    inf[1].add(base1 + 'ь')
+    inf[1].add(base1 + 'ям')
+    if animacy:
+        inf[1].add(base1 + 'ь')
+    else:
+        inf[1].add(base1 + 'и')
+    inf[1].add(base1 + 'ями')
+    inf[1].add(base1 + 'ях')
+    # end pl
+    
+def q_f_3d( animacy, base, base1 = None, base2 = None):
+    # слуга, дуга
+    inf = [[],[]]
+    inf[0].add(base + 'а́')
+    inf[0].add(base + 'и́')
+    inf[0].add(base + 'е́')
+    if animacy:
+        inf[0].add(base + 'у́')
+    else:
+        inf[0].add(base + 'у́')
+    inf[0].add(base + 'о́й')
+    inf[0].add(base + 'е́')
+    # end sg
+    inf[1].add(base1 + 'и')
+    inf[1].add(base1)
+    inf[1].add(base1 + 'ам')
+    if animacy:
+        inf[1].add(base1)
+    else:
+        inf[1].add(base1 + 'и')
+    inf[1].add(base1 + 'ами')
+    inf[1].add(base1 + 'ах')
+    # end pl
+    
+def q_f_4d( animacy, base, base1 = None, base2 = None):
+    # межа
+    inf = [[],[]]
+    inf[0].add(base + 'а́')
+    inf[0].add(base + 'и́')
+    inf[0].add(base + 'е́')
+    if animacy:
+        inf[0].add(base + 'у́')
+    else:
+        inf[0].add(base + 'у́')
+    inf[0].add(base + 'о́й')
+    inf[0].add(base + 'е́')
+    # end sg
+    inf[1].add(base1 + 'и')
+    inf[1].add(base1 + 'ей')
+    inf[1].add(base1 + 'ам')
+    if animacy:
+        inf[1].add(base1)
+    else:
+        inf[1].add(base1 + 'и')
+    inf[1].add(base1 + 'ами')
+    inf[1].add(base1 + 'ах')
+    # end pl
+    
+def q_f_6d (animacy, base, base1 = None, base2 = None):
+    # змея
+    inf = [[],[]]
+    inf[0].add(base + 'я́')
+    inf[0].add(base + 'и́')
+    inf[0].add(base + 'е́')
+    if animacy:
+        inf[0].add(base + 'ю́')
+    else:
+        inf[0].add(base + 'ю́')
+    inf[0].add(base + 'ёй')
+    inf[0].add(base + 'е́')
+    # end sg
+    inf[1].add(base1 + 'и')
+    inf[1].add(base1 + 'й')
+    inf[1].add(base1 + 'ям')
+    if animacy:
+        inf[1].add(base1 + 'й')
+    else:
+        inf[1].add(base1 + 'и')
+    inf[1].add(base1 + 'ями')
+    inf[1].add(base1 + 'ях')
+    # end pl
+    
+def q_f_1dt( animacy, base, base1 = None, base2 = None):
+    # спина, зима
+    inf = [[],[]]
+    inf[0].add(base + 'а́')
+    inf[0].add(base + 'ы́')
+    inf[0].add(base + 'е́')
+    if animacy:
+        inf[0].add(base1 + 'у')
+    else:
+        inf[0].add(base1 + 'у')
+    inf[0].add(base + 'о́й')
+    inf[0].add(base + 'е́')
+    # end sg
+    inf[1].add(base1 + 'ы')
+    inf[1].add(base1)
+    inf[1].add(base1 + 'ам')
+    if animacy:
+        inf[1].add(base1)
+    else:
+        inf[1].add(base1 + 'ы')
+    inf[1].add(base1 + 'ами')
+    inf[1].add(base1 + 'ах')
+    # end pl
+    
+def q_f_3dt( animacy, base, base1 = None, base2 = None):
+    # река
+    inf = [[],[]]
+    inf[0].add(base + 'а́')
+    inf[0].add(base + 'и́')
+    inf[0].add(base + 'е́')
+    if animacy:
+        inf[0].add(base1 + 'у')
+    else:
+        inf[0].add(base1 + 'у')
+    inf[0].add(base + 'о́й')
+    inf[0].add(base + 'е́')
+    # end sg
+    inf[1].add(base1 + 'и')
+    inf[1].add(base1)
+    inf[1].add(base1 + 'ам')
+    if animacy:
+        inf[1].add(base1)
+    else:
+        inf[1].add(base1 + 'и')
+    inf[1].add(base1 + 'ами')
+    inf[1].add(base1 + 'ах')
+    # end pl
+    
+def q_f_4dt( animacy, base, base1 = None, base2 = None):
+    # душа
+    inf = [[],[]]
+    inf[0].add(base + 'а́')
+    inf[0].add(base + 'и́')
+    inf[0].add(base + 'е́')
+    if animacy:
+        inf[0].add(base1 + 'у')
+    else:
+        inf[0].add(base1 + 'у')
+    inf[0].add(base + 'о́й')
+    inf[0].add(base + 'е́')
+    # end sg
+    inf[1].add(base1 + 'и')
+    inf[1].add(base1 + 'ей')
+    inf[1].add(base1 + 'ам')
+    if animacy:
+        inf[1].add(base1)
+    else:
+        inf[1].add(base1 + 'и')
+    inf[1].add(base1 + 'ами')
+    inf[1].add(base1 + 'ах')
+    # end pl
+    
+def q_f_2e( animacy, base, base1 = None, base2 = None):
+    # доля
+    inf = [[],[]] 
+    inf[0].add(base + 'я')
+    inf[0].add(base + 'и')
+    inf[0].add(base + 'е')
+    if animacy:
+        inf[0].add(base + 'ю')
+    else:
+        inf[0].add(base + 'ю')
+    inf[0].add(base + 'ей')
+    inf[0].add(base + 'е')
+    # end sg
+    inf[1].add(base + 'и')
+    inf[1].add(base1 + 'е́й')
+    inf[1].add(base1 + 'я́м')
+    if animacy:
+        inf[1].add(base1 + 'е́й')
+    else:
+        inf[1].add(base + 'и')
+    inf[1].add(base1 + 'я́ми')
+    inf[1].add(base1 + 'я́х')
+    # end pl
+    
+def q_f_1f( animacy, base, base1 = None, base2 = None):
+    # губа
+    inf = [[],[]]
+    inf[0].add(base + 'а́')
+    inf[0].add(base + 'ы́')
+    inf[0].add(base + 'е́')
+    if animacy:
+        inf[0].add(base + 'у́')
+    else:
+        inf[0].add(base + 'у́')
+    inf[0].add(base + 'о́й')
+    inf[0].add(base + 'е́')
+    # end sg
+    inf[1].add(base1 + 'ы')
+    inf[1].add(base1)
+    inf[1].add(base + 'а́м')
+    if animacy:
+        inf[1].add(base1)
+    else:
+        inf[1].add(base1 + 'ы')
+    inf[1].add(base + 'а́ми')
+    inf[1].add(base + 'а́х')
+    # end pl
+    
+def q_f_2f( animacy, base, base1 = None, base2 = None):
+    # ноздря, простыня
+    inf = [[],[]] 
+    inf[0].add(base + 'я́')
+    inf[0].add(base + 'и́')
+    inf[0].add(base + 'е́')
+    if animacy:
+        inf[0].add(base + 'ю́')
+    else:
+        inf[0].add(base + 'ю́')
+    inf[0].add(base + 'ёй')
+    inf[0].add(base + 'е́')
+    # end sg
+    inf[1].add(base1 + 'и')
+    inf[1].add(base + 'е́й')
+    inf[1].add(base + 'я́м')
+    if animacy:
+        inf[1].add(base + 'е́й')
+    else:
+        inf[1].add(base1 + 'и')
+    inf[1].add(base + 'я́ми')
+    inf[1].add(base + 'я́х')
+    # end pl
+    
+def q_f_3f( animacy, base, base1 = None, base2 = None):
+    # слега
+    inf = [[],[]]
+    inf[0].add(base + 'а́')
+    inf[0].add(base + 'и́')
+    inf[0].add(base + 'е́')
+    if animacy:
+        inf[0].add(base + 'у́')
+    else:
+        inf[0].add(base + 'у́')
+    inf[0].add(base + 'о́й')
+    inf[0].add(base + 'е́')
+    # end sg
+    inf[1].add(base1 + 'и')
+    inf[1].add(base2)
+    inf[1].add(base + 'а́м')
+    if animacy:
+        inf[1].add(base2)
+    else:
+        inf[1].add(base1 + 'и')
+    inf[1].add(base + 'а́ми')
+    inf[1].add(base + 'а́х')
+    # end pl
+    
+def q_f_4f( animacy, base, base1 = None, base2 = None):
+    # вожжа
+    inf = [[],[]]
+    inf[0].add(base + 'а́')
+    inf[0].add(base + 'и́')
+    inf[0].add(base + 'е́')
+    if animacy:
+        inf[0].add(base + 'у́')
+    else:
+        inf[0].add(base + 'у́')
+    inf[0].add(base + 'о́й')
+    inf[0].add(base + 'е́')
+    # end sg
+    inf[1].add(base1 + 'и')
+    inf[1].add(base + 'е́й')
+    inf[1].add(base + 'а́м')
+    if animacy:
+        inf[1].add(base)
+    else:
+        inf[1].add(base1 + 'и')
+    inf[1].add(base + 'а́ми')
+    inf[1].add(base + 'а́х')
+    # end pl
+    
+def q_f_1ft( animacy, base, base1 = None, base2 = None):
+    # борода
+    inf = [[],[]]
+    inf[0].add(base + 'а́')
+    inf[0].add(base + 'ы́')
+    inf[0].add(base + 'е́')
+    if animacy:
+        inf[0].add(base1 + 'у')
+    else:
+        inf[0].add(base1 + 'у')
+    inf[0].add(base + 'о́й')
+    inf[0].add(base + 'е́')
+    # end sg
+    inf[1].add(base1 + 'ы')
+    inf[1].add(base1)
+    inf[1].add(base + 'а́м')
+    if animacy:
+        inf[1].add(base1)
+    else:
+        inf[1].add(base1 + 'ы')
+    inf[1].add(base + 'а́ми')
+    inf[1].add(base + 'а́х')
+    # end pl
+    
+def q_f_3ft( animacy, base, base1 = None, base2 = None):
+    # щека, рука
+    inf = [[],[]]
+    inf[0].add(base + 'а́')
+    inf[0].add(base + 'и́')
+    inf[0].add(base + 'е́')
+    if animacy:
+        inf[0].add(base1 + 'у')
+    else:
+        inf[0].add(base1 + 'у')
+    inf[0].add(base + 'о́й')
+    inf[0].add(base + 'е́')
+    # end sg
+    inf[1].add(base1 + 'и')
+    inf[1].add(base1)
+    inf[1].add(base + 'а́м')
+    if animacy:
+        inf[1].add(base1)
+    else:
+        inf[1].add(base1 + 'и')
+    inf[1].add(base + 'а́ми')
+    inf[1].add(base + 'а́х')
+    # end pl
+    
+def q_f_8a( animacy, base, base1 = None, base2 = None):
+    # лань, тетрадь
+    inf = [[],[]]
+    inf[0].add(base + 'ь')
+    inf[0].add(base + 'и')
+    inf[0].add(base + 'и')
+    if animacy:
+        inf[0].add(base + 'ь')
+    else:
+        inf[0].add(base + 'ь')
+    inf[0].add(base + 'ью')
+    inf[0].add(base + 'и')
+    # end sg
+    inf[1].add(base + 'и')
+    inf[1].add(base + 'ей')
+    inf[1].add(base + 'ям')
+    if animacy:
+        inf[1].add(base + 'ей')
+    else:
+        inf[1].add(base + 'и')
+    inf[1].add(base + 'ями')
+    inf[1].add(base + 'ях')
+    # end pl
+    
+def q_f_8e( animacy, base, base1 = None, base2 = None):
+    # стерлядь, площадь
+    inf = [[],[]]
+    inf[0].add(base + 'ь')
+    inf[0].add(base + 'и')
+    inf[0].add(base + 'и')
+    if animacy:
+        inf[0].add(base + 'ь')
+    else:
+        inf[0].add(base + 'ь')
+    inf[0].add(base + 'ью')
+    inf[0].add(base + 'и')
+    # end sg
+    inf[1].add(base + 'и')
+    inf[1].add(base1 + 'е́й')
+    inf[1].add(base1 + 'я́м')
+    if animacy:
+        inf[1].add(base1 + 'е́й')
+    else:
+        inf[1].add(base + 'и')
+    inf[1].add(base1 + 'я́ми')
+    inf[1].add(base1 + 'я́х')
+    # end pl
+    
+def q_f_8a_sh( animacy, base, base1 = None, base2 = None):
+    # пустошь
+    inf = [[],[]]
+    inf[0].add(base + 'ь')
+    inf[0].add(base + 'и')
+    inf[0].add(base + 'и')
+    if animacy:
+        inf[0].add(base + 'ь')
+    else:
+        inf[0].add(base + 'ь')
+    inf[0].add(base + 'ью')
+    inf[0].add(base + 'и')
+    # end sg
+    inf[1].add(base + 'и')
+    inf[1].add(base + 'ей')
+    inf[1].add(base + 'ам')
+    if animacy:
+        inf[1].add(base + 'ей')
+    else:
+        inf[1].add(base + 'и')
+    inf[1].add(base + 'ами')
+    inf[1].add(base + 'ах')
+    # end pl
+    
+def q_f_8e_sh( animacy, base, base1 = None, base2 = None):
+    # мышь, ночь
+    inf = [[],[]]
+    inf[0].add(base + 'ь')
+    inf[0].add(base + 'и')
+    inf[0].add(base + 'и')
+    if animacy:
+        inf[0].add(base + 'ь')
+    else:
+        inf[0].add(base + 'ь')
+    inf[0].add(base + 'ью')
+    inf[0].add(base + 'и')
+    # end sg
+    inf[1].add(base + 'и')
+    inf[1].add(base1 + 'е́й')
+    inf[1].add(base1 + 'а́м')
+    if animacy:
+        inf[1].add(base1 + 'е́й')
+    else:
+        inf[1].add(base + 'и')
+    inf[1].add(base1 + 'а́ми')
+    inf[1].add(base1 + 'а́х')
+    # end pl
+    
+def q_f_8ft( animacy, base, base1 = None, base2 = None):
+    # грудь
+    inf = [[],[]]
+    inf[0].add(base + 'ь')
+    inf[0].add(base1 + 'и́')
+    inf[0].add(base1 + 'и́')
+    if animacy:
+        inf[0].add(base + 'ь')
+    else:
+        inf[0].add(base + 'ь')
+    inf[0].add(base + 'ью')
+    inf[0].add(base1 + 'и́')
+    # end sg
+    inf[1].add(base + 'и')
+    inf[1].add(base1 + 'е́й')
+    inf[1].add(base1 + 'я́м')
+    if animacy:
+        inf[1].add(base1 + 'е́й')
+    else:
+        inf[1].add(base + 'и')
+    inf[1].add(base1 + 'я́ми')
+    inf[1].add(base1 + 'я́х')
+    # end pl
+
+def q_f_1as( animacy, base, base1 = None, base2 = None):
+    # царевна, свадьба
+    inf = [[],[]]
+    inf[0].add(base + 'а')
+    inf[0].add(base + 'ы')
+    inf[0].add(base + 'е')
+    if animacy:
+        inf[0].add(base + 'у')
+    else:
+        inf[0].add(base + 'у')
+    inf[0].add(base + 'ой')
+    inf[0].add(base + 'е')
+    # end sg
+    inf[1].add(base + 'ы')
+    inf[1].add(base1)
+    inf[1].add(base + 'ам')
+    if animacy:
+        inf[1].add(base1)
+    else:
+        inf[1].add(base + 'ы')
+    inf[1].add(base + 'ами')
+    inf[1].add(base + 'ах')
+    # end pl
+    
+def q_f_1bs(animacy, base, base1 = None, base2 = None):
+    # княжна, кайма
+    inf = [[],[]]
+    inf[0].add(base + 'а́')
+    inf[0].add(base + 'ы́')
+    inf[0].add(base + 'е́')
+    if animacy:
+        inf[0].add(base + 'у́')
+    else:
+        inf[0].add(base + 'у́')
+    inf[0].add(base + 'о́й')
+    inf[0].add(base + 'е́')
+    # end sg
+    inf[1].add(base + 'ы́')
+    inf[1].add(base1)
+    inf[1].add(base + 'а́м')
+    if animacy:
+        inf[1].add(base1)
+    else:
+        inf[1].add(base + 'ы́')
+    inf[1].add(base + 'а́ми')
+    inf[1].add(base + 'а́х')
+    # end pl
+    
+def q_f_1ds( animacy, base, base1 = None, base2 = None):
+    # сестра, весна
+    inf = [[],[]]
+    inf[0].add(base + 'а́')
+    inf[0].add(base + 'ы́')
+    inf[0].add(base + 'е́')
+    if animacy:
+        inf[0].add(base + 'у́')
+    else:
+        inf[0].add(base + 'у́')
+    inf[0].add(base + 'о́й')
+    inf[0].add(base + 'е́')
+    # end sg
+    inf[1].add(base1 + 'ы')
+    inf[1].add(base2)
+    inf[1].add(base1 + 'ам')
+    if animacy:
+        inf[1].add(base2)
+    else:
+        inf[1].add(base1 + 'ы')
+    inf[1].add(base1 + 'ами')
+    inf[1].add(base1 + 'ах')
+    # end pl
+    
+def q_f_1es(animacy, base, base1 = None, base2 = None):
+    # бубна
+    inf = [[],[]]
+    inf[0].add(base + 'а')
+    inf[0].add(base + 'ы')
+    inf[0].add(base + 'е')
+    if animacy:
+        inf[0].add(base + 'у')
+    else:
+        inf[0].add(base + 'у')
+    inf[0].add(base + 'ой')
+    inf[0].add(base + 'е')
+    # end sg
+    inf[1].add(base + 'ы')
+    inf[1].add(base1)
+    inf[1].add(base2 + 'а́м')
+    if animacy:
+        inf[1].add(base1)
+    else:
+        inf[1].add(base + 'ы')
+    inf[1].add(base2 + 'а́ми')
+    inf[1].add(base2 + 'а́х')
+    # end pl
+    
+def q_f_1fs( animacy, base, base1 = None, base2 = None):
+    # копна
+    inf = [[],[]]
+    inf[0].add(base + 'а́')
+    inf[0].add(base + 'ы́')
+    inf[0].add(base + 'е́')
+    if animacy:
+        inf[0].add(base + 'у́')
+    else:
+        inf[0].add(base + 'у́')
+    inf[0].add(base + 'о́й')
+    inf[0].add(base + 'е́')
+    # end sg
+    inf[1].add(base1 + 'ы')
+    inf[1].add(base2)
+    inf[1].add(base1 + 'а́м')
+    if animacy:
+        inf[1].add(base2)
+    else:
+        inf[1].add(base1 + 'ы')
+    inf[1].add(base1 + 'а́ми')
+    inf[1].add(base1 + 'а́х')
+    # end pl
+    
+def q_f_2as( animacy, base, base1 = None, base2 = None):
+    # цапля, кровля
+    inf = [[],[]] 
+    inf[0].add(base + 'я')
+    inf[0].add(base + 'и')
+    inf[0].add(base + 'е')
+    if animacy:
+        inf[0].add(base + 'ю')
+    else:
+        inf[0].add(base + 'ю')
+    inf[0].add(base + 'ей')
+    inf[0].add(base + 'е')
+    # end sg
+    inf[1].add(base + 'и')
+    inf[1].add(base1 + 'ь')
+    inf[1].add(base + 'ям')
+    if animacy:
+        inf[1].add(base1 + 'ь')
+    else:
+        inf[1].add(base + 'и')
+    inf[1].add(base + 'ями')
+    inf[1].add(base + 'ях')
+    # end pl
+    
+def q_f_2as_nya( animacy, base, base1 = None, base2 = None):
+    # просвирня, песня
+    inf = [[],[]] 
+    inf[0].add(base + 'я')
+    inf[0].add(base + 'и')
+    inf[0].add(base + 'е')
+    if animacy:
+        inf[0].add(base + 'ю')
+    else:
+        inf[0].add(base + 'ю')
+    inf[0].add(base + 'ей')
+    inf[0].add(base + 'е')
+    # end sg
+    inf[1].add(base + 'и')
+    inf[1].add(base1)
+    inf[1].add(base + 'ям')
+    if animacy:
+        inf[1].add(base1)
+    else:
+        inf[1].add(base + 'и')
+    inf[1].add(base + 'ями')
+    inf[1].add(base + 'ях')
+    # end pl
+    
+def q_f_2bs(animacy, base, base1 = None, base2 = None):
+    # шестерня
+    inf = [[],[]]
+    inf[0].add(base + 'я́')
+    inf[0].add(base + 'и́')
+    inf[0].add(base + 'е́')
+    if animacy:
+        inf[0].add(base + 'ю́')
+    else:
+        inf[0].add(base + 'ю́')
+    inf[0].add(base + 'ёй')
+    inf[0].add(base + 'е́')
+    # end sg
+    inf[1].add(base + 'и́')
+    inf[1].add(base + 'е́й')
+    inf[1].add(base + 'я́м')
+    if animacy:
+        inf[1].add(base + 'е́й')
+    else:
+        inf[1].add(base + 'и́')
+    inf[1].add(base + 'я́ми')
+    inf[1].add(base + 'я́х')
+    # end pl
+    
+def q_f_2ds( animacy, base, base1 = None, base2 = None):
+    # петля
+    inf = [[],[]] 
+    inf[0].add(base + 'я́')
+    inf[0].add(base + 'и́')
+    inf[0].add(base + 'е')
+    if animacy:
+        inf[0].add(base + 'ю́')
+    else:
+        inf[0].add(base + 'ю́')
+    inf[0].add(base + 'ёй')
+    inf[0].add(base + 'е́')
+    # end sg
+    inf[1].add(base1 + 'и')
+    inf[1].add(base2 + 'ь')
+    inf[1].add(base1 + 'ям')
+    if animacy:
+        inf[1].add(base2 + 'ь')
+    else:
+        inf[1].add(base1 + 'и')
+    inf[1].add(base1 + 'ями')
+    inf[1].add(base1 + 'ях')
+    # end pl
