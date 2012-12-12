@@ -30,17 +30,32 @@ funcs['m']['0'] = q_0
 funcs['f']['0'] = q_0
 funcs['n']['0'] = q_0
 
+class FailCollector(object):
+    def __init__(self):
+        self.fails = {}
+    def append(self, fail):
+        if fail in self.fails:
+            self.fails[fail] += 1
+        else:
+            self.fails[fail] = 1
+
+    def get(self, descending = True):
+        return self.fails.items()
+
+    def getSorted(self, descending = True):
+        return sorted(self.fails.items(), key = lambda x: x[1], reverse = descending)
+
+failCollector = FailCollector()
+
 def safeRun(word, f, *args, **kwargs):
     try:
         return f(*args, **kwargs)
-    except KeyError as e:
+    except KeyError:
         logging.error("not enough arguments to generate forms for {}: args={}, kwargs={}".format(word, args, kwargs))
         return None
 
 def getWordForms(word, gender, animacy, inflection, **b):
     if gender in funcs:
-        if word == "сердце":
-            logging.warning("funcs={}".format(funcs[gender]))
         if inflection in funcs[gender]:
             # whoo-hoo!
             return safeRun(word, funcs[gender][inflection], animacy, **b)
@@ -55,8 +70,10 @@ def getWordForms(word, gender, animacy, inflection, **b):
                 inf[0] = [None, None, None, None, None, None]
             return inf
         else:
+            failCollector.append((gender, animacy, inflection))
             logging.error("no function for {}: [{},{},{}]".format(word, gender, animacy, inflection))
             return None
     else:
+        failCollector.append((gender, animacy, inflection))
         logging.error("bad gender for {}: [{},{},{}]".format(word, gender, animacy, inflection))
         return None

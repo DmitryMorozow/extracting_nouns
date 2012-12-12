@@ -2,7 +2,7 @@ from lxml import etree
 import re
 import logging
 
-from modifying_nouns import getWordForms
+from modifying_nouns import getWordForms, failCollector
 
 ns = 'http://www.mediawiki.org/xml/export-0.8/'
 
@@ -63,11 +63,11 @@ class NounDef(object):
                 baseProps = gm.groups()
                 if None in baseProps:
                     logging.warning("unable to get some of props for '{}': {}".format(word, baseProps))
-		    # do some magic for человек
+                    # do some magic for человек
                     if baseProps[2] is None:
                         if baseProps[1] and baseProps[1].strip() == 'a-люди':
                             baseProps = (baseProps[0], None, baseProps[1])
-   
+
             pos = gm.end()
             props = {}
             pm = propRe.match(text, gm.end())
@@ -77,15 +77,15 @@ class NounDef(object):
                 pm = propRe.match(text, pm.end())
 
             if not text[pos:].lstrip().startswith("}}"):
-                logging.warning("Some unparsed data in '{}' for {}".format(text[m.start():pos+10], word))
+                logging.warning("Some unparsed data in '{}' for {}".format(text[m.start():pos + 10], word))
             defs.append(NounDef(word, baseProps[0], baseProps[1], baseProps[2], props))
         return defs
-    
+
 def extract_page(elem):
     if elem.tag != '{' + ns + '}' + 'page':
         return False
-    title = elem.xpath('t:title', namespaces={'t': ns})
-    text = elem.xpath('t:revision/t:text', namespaces={'t': ns})
+    title = elem.xpath('t:title', namespaces = {'t': ns})
+    text = elem.xpath('t:revision/t:text', namespaces = {'t': ns})
     if not text or not text[0].text or not title or not title[0].text:
         return True
     title = title[0].text
@@ -94,16 +94,19 @@ def extract_page(elem):
         return True
     defs = NounDef.findall(title, text[0].text)
     if not defs:
-        return True # no Russian nouns found
+        return True  # no Russian nouns found
     for d in defs:
         print ("{0}, {1}, {2}, {3}".format(
             d.word, d.gender or '-', d.getAnimacyRepr(d.animacy), d.inflection or '-'
-        )) 
+        ))
         logging.warning("processing forms for {}".format(d))
         getWordForms(d.word, d.gender, d.animacy, d.inflection, **d.props)
     return True
 
 out = open('titles.xml', 'w')
-context = etree.iterparse('ruwiktionary-latest-pages-articles.xml', events=('end',))
+context = etree.iterparse('ruwiktionary-latest-pages-articles.xml', events = ('end',))
 
 fast_iter(context, extract_page)
+
+for k, v in failCollector.getSorted():
+    logging.error("missing function for processing {}: {}".format(k, v))
