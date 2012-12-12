@@ -413,7 +413,7 @@ def q_n_1ds(animacy, **b):
     return inf
 n_funcs['1*d'] = q_n_1ds
 # гумно может склоняться по 1*d^, при этом правила те же, что и для 1*d, но другая основа2
-q_b_1dsV = q_n_1ds
+n_funcs['1*d^'] = q_n_1ds
 
 def q_n_1dsVS(animacy, **b):
     # animacy unused
@@ -702,6 +702,7 @@ def q_n_3eV(animacy, **b):
     inf[1].append(b['основа2'] + 'а́ми')
     inf[1].append(b['основа2'] + 'а́х')
     # end pl
+n_funcs['3e^'] = q_n_3eV
 
 def q_n_4a(animacy, **b):
     # чудовище, жилище
@@ -970,7 +971,7 @@ def q_n_5cs(animacy, **b):
     inf[1].append(b['основа1'] + 'а́х')
     # end pl
     return inf
-n_funcs['5*с'] = q_n_5cs
+n_funcs['5*c'] = q_n_5cs
 
 # completely matches q_n_1d. What is it for?
 def q_n_5d(animacy, **b):
